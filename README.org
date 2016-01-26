@@ -5,6 +5,7 @@ See the end of the file for license conditions.
 This directory tree holds version 24.5 of GNU Emacs, the extensible,
 customizable, self-documenting real-time display editor.
 * The file INSTALL
+[[bookmark:INSTALL][Bookmark: INSTALL]]
 The file INSTALL in this directory says how to build and install GNU
 Emacs on various systems, once you have unpacked or checked out the
 entire Emacs file tree.
@@ -64,12 +65,15 @@ There are several subdirectories:
 `src'       holds the C code for Emacs (the Emacs Lisp interpreter and
             its primitives, the redisplay code, and some basic editing
             functions).
+[[bookmark:src][Bookmark: src]]
 `lisp'      holds the Emacs Lisp code for Emacs (most everything else).
+[[bookmark:lisp][Bookmark: lisp]]
 `leim'      holds the original source files for the generated files
             in lisp/leim.  These form the library of Emacs input methods,
             required to type international characters that can't be
             directly produced by your keyboard.
 `lib'       holds source code for libraries used by Emacs and its utilities
+[[bookmark:lib][Bookmark: lib]]
 `lib-src'   holds the source code for some utility programs for use by or
             with Emacs, like movemail and etags.
 `etc'       holds miscellaneous architecture-independent data files Emacs
