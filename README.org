@@ -47,9 +47,36 @@ recent versions of these build tools.  This should be needed only if
 you edit files like `configure.ac' that specify Emacs's autobuild
 procedure.
 * The file `Makefile.in' + `configure' = Makefile
-
 The file `Makefile.in' is a template used by `configure' to create
 `Makefile'.
+[[bookmark:All%20object%20files%20linked%20into%20temacs][Bookmark: All object files linked into temacs]]
+
+ALLOBJS = $(FIRSTFILE_OBJ) $(VMLIMIT_OBJ) $(obj) $(otherobj)
+FIRSTFILE_OBJ=@FIRSTFILE_OBJ@
+## vm-limit.o if !SYSTEM_MALLOC, else empty.
+VMLIMIT_OBJ=@VMLIMIT_OBJ@
+obj = $(base_obj) $(NS_OBJC_OBJ)
+base_obj = dispnew.o frame.o scroll.o xdisp.o menu.o $(XMENU_OBJ) window.o \
+	charset.o coding.o category.o ccl.o character.o chartab.o bidi.o \
+	$(CM_OBJ) term.o terminal.o xfaces.o $(XOBJ) $(GTK_OBJ) $(DBUS_OBJ) \
+	emacs.o keyboard.o macros.o keymap.o sysdep.o \
+	buffer.o filelock.o insdel.o marker.o \
+	minibuf.o fileio.o dired.o \
+	cmds.o casetab.o casefiddle.o indent.o search.o regex.o undo.o \
+	alloc.o data.o doc.o editfns.o callint.o \
+	eval.o floatfns.o fns.o font.o print.o lread.o \
+	syntax.o $(UNEXEC_OBJ) bytecode.o \
+	process.o gnutls.o callproc.o \
+	region-cache.o sound.o atimer.o \
+	doprnt.o intervals.o textprop.o composite.o xml.o $(NOTIFY_OBJ) \
+	profiler.o decompress.o \
+	$(MSDOS_OBJ) $(MSDOS_X_OBJ) $(NS_OBJ) $(CYGWIN_OBJ) $(FONT_OBJ) \
+	$(W32_OBJ) $(WINDOW_SYSTEM_OBJ) $(XGSELOBJ)
+
+## List of object files that make-docfile should not be told about.
+otherobj= $(TERMCAP_OBJ) $(PRE_ALLOC_OBJ) $(GMALLOC_OBJ) $(RALLOC_OBJ) \
+  $(POST_ALLOC_OBJ) $(WIDGET_OBJ) $(LIBOBJS)
+
 * The file `configure' => `Makefile'
 The file `configure' is a shell script to acclimate Emacs to the
 oddities of your processor and operating system.  It creates the file
