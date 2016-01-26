@@ -47,6 +47,7 @@ recent versions of these build tools.  This should be needed only if
 you edit files like `configure.ac' that specify Emacs's autobuild
 procedure.
 * The file `Makefile.in' + `configure' = Makefile
+
 The file `Makefile.in' is a template used by `configure' to create
 `Makefile'.
 * The file `configure' => `Makefile'
