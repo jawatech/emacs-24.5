@@ -83,6 +83,10 @@ base_obj = dispnew.o frame.o scroll.o xdisp.o menu.o $(XMENU_OBJ) window.o \
 
 otherobj= $(TERMCAP_OBJ) $(PRE_ALLOC_OBJ) $(GMALLOC_OBJ) $(RALLOC_OBJ) \
   $(POST_ALLOC_OBJ) $(WIDGET_OBJ) $(LIBOBJS)
+** lisp parsing
+*** lread.c
+
+*** syntax.c
 
 * The file `configure' => `Makefile'
 The file `configure' is a shell script to acclimate Emacs to the
