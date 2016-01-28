@@ -84,21 +84,22 @@ base_obj = dispnew.o frame.o scroll.o xdisp.o menu.o $(XMENU_OBJ) window.o \
 otherobj= $(TERMCAP_OBJ) $(PRE_ALLOC_OBJ) $(GMALLOC_OBJ) $(RALLOC_OBJ) \
   $(POST_ALLOC_OBJ) $(WIDGET_OBJ) $(LIBOBJS)
 ** cflow
-vm-limit.c dispnew.c frame.c scroll.c xdisp.c menu.c window.c \
-	charset.c coding.c category.c ccl.c character.c chartab.c bidi.c \
-	cm.c term.c terminal.c xfaces.c \
-	emacs.c keyboard.c macros.c keymap.c sysdep.c \
-	buffer.c filelock.c insdel.c marker.c \
-	minibuf.c fileio.c dired.c \
-	cmds.c casetab.c casefiddle.c indent.c search.c regex.c undo.c \
-	alloc.c data.c doc.c editfns.c callint.c \
-	eval.c floatfns.c fns.c font.c print.c lread.c \
-	syntax.c unexec.h bytecode.c \
-	process.c gnutls.c callproc.c \
-	region-cache.c sound.c atimer.c \
-	doprnt.c intervals.c textprop.c composite.c xml.c inotify.c \
-	profiler.c decompress.c \
-        terminfo.c lastfile.c 
+vm-limit.c dispnew.o frame.o scroll.o xdisp.o menu.o window.o \
+	charset.o coding.o category.o ccl.o character.o chartab.o bidi.o \
+	cm.o term.o terminal.o xfaces.o \
+	emacs.o keyboard.o macros.o keymap.o sysdep.o \
+	buffer.o filelock.o insdel.o marker.o \
+	minibuf.o fileio.o dired.o \
+	cmds.o casetab.o casefiddle.o indent.o search.o regex.o undo.o \
+	alloc.o data.o doc.o editfns.o callint.o \
+	eval.o floatfns.o fns.o font.o print.o lread.o \
+	syntax.o unexec.h bytecode.o \
+	process.o gnutls.o callproc.o \
+	region-cache.o sound.o atimer.o \
+	doprnt.o intervals.o textprop.o composite.o xml.o inotify.o \
+	profiler.o decompress.o \
+        termcap.c lastfile.o $(GMALLOC_OBJ) $(RALLOC_OBJ) \
+  $(POST_ALLOC_OBJ) $(WIDGET_OBJ) $(LIBOBJS)
 ** lisp parsing
 *** lread.c
 
