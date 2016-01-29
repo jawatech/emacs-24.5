@@ -49,8 +49,8 @@ procedure.
 * The file `Makefile.in' + `configure' = Makefile
 The file `Makefile.in' is a template used by `configure' to create
 `Makefile'.
-[[bookmark:All%20object%20files%20linked%20into%20temacs][
-Bookmark: All object files linked into temacs]]
+
+[[bookmark:All%20object%20files%20linked%20into%20temacs][Bookmark: All object files linked into temacs]]
 
 ALLOBJS = $(FIRSTFILE_OBJ) $(VMLIMIT_OBJ) $(obj) $(otherobj)
 
@@ -83,6 +83,10 @@ base_obj = dispnew.o frame.o scroll.o xdisp.o menu.o $(XMENU_OBJ) window.o \
 
 otherobj= $(TERMCAP_OBJ) $(PRE_ALLOC_OBJ) $(GMALLOC_OBJ) $(RALLOC_OBJ) \
   $(POST_ALLOC_OBJ) $(WIDGET_OBJ) $(LIBOBJS)
+** emacs.o
+[[bookmark:emacs.c][Bookmark: emacs.c]]
+
+
 
 * The file `configure' => `Makefile'
 The file `configure' is a shell script to acclimate Emacs to the

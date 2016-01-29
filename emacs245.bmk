@@ -2,7 +2,19 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(#1=(#("All object files linked into temacs" 0 35
+(#1=(#("emacs.c" 0 7
+      (bmkp-full-record #1#))
+    (filename . "~/github/emacs-24.5/src/emacs.c")
+    (buffer-name . "emacs.c")
+    (front-context-string . "/* Fully extensi")
+    (rear-context-string)
+    (front-context-region-string)
+    (rear-context-region-string)
+    (visits . 0)
+    (time . #2=(22183 26194 162517 463000))
+    (created . #2#)
+    (position . 1))
+#1=(#("All object files linked into temacs" 0 35
       (bmkp-full-record #1#))
     (filename . "~/github/emacs-24.5/src/Makefile.in")
     (buffer-name . "Makefile.in")
@@ -10,9 +22,9 @@
     (rear-context-string . "BJ) $(LIBOBJS)\n\n")
     (front-context-region-string)
     (rear-context-region-string)
-    (visits . 0)
-    (time . #2=(22183 24610 466773 167000))
-    (created . #2#)
+    (visits . 1)
+    (time 22183 25013 288539 947000)
+    (created 22183 24610 466773 167000)
     (position . 12309))
 #1=(#("Makefile.in" 0 11
       (bmkp-full-record #1#))
