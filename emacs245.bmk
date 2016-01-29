@@ -2,7 +2,19 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(#1=(#("emacs.c" 0 7
+(#1=(#("cflow.txt" 0 9
+      (bmkp-full-record #1#))
+    (filename . "~/github/emacs-24.5/src/cflow.txt")
+    (buffer-name . "cflow.txt")
+    (front-context-string . ";; This file is ")
+    (rear-context-string)
+    (front-context-region-string)
+    (rear-context-region-string)
+    (visits . 0)
+    (time . #2=(22186 57866 693948 352000))
+    (created . #2#)
+    (position . 1))
+#1=(#("emacs.c" 0 7
       (bmkp-full-record #1#))
     (filename . "~/github/emacs-24.5/src/emacs.c")
     (buffer-name . "emacs.c")

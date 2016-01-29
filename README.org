@@ -84,12 +84,9 @@ base_obj = dispnew.o frame.o scroll.o xdisp.o menu.o $(XMENU_OBJ) window.o \
 otherobj= $(TERMCAP_OBJ) $(PRE_ALLOC_OBJ) $(GMALLOC_OBJ) $(RALLOC_OBJ) \
   $(POST_ALLOC_OBJ) $(WIDGET_OBJ) $(LIBOBJS)
 
-** emacs.o
-[[bookmark:emacs.c][Bookmark: emacs.c]]
-
 
 ** cflow
-vm-limit.c dispnew.c frame.c scroll.c xdisp.c menu.c window.c \
+cflow -d 6 --emacs -T vm-limit.c dispnew.c frame.c scroll.c xdisp.c menu.c window.c \
 	charset.c coding.c category.c ccl.c character.c chartab.c bidi.c \
 	cm.c term.c terminal.c xfaces.c \
 	emacs.c keyboard.c macros.c keymap.c sysdep.c \
@@ -103,7 +100,11 @@ vm-limit.c dispnew.c frame.c scroll.c xdisp.c menu.c window.c \
 	region-cache.c sound.c atimer.c \
 	doprnt.c intervals.c textprop.c composite.c xml.c inotify.c \
 	profiler.c decompress.c \
-        terminfo.c lastfile.c 
+        terminfo.c lastfile.c -o cflow.txt
+
+[[bookmark:cflow.txt][Bookmark: cflow.txt]]
+** emacs.o
+[[bookmark:emacs.c][Bookmark: emacs.c]]
 ** lisp parsing
 *** lread.c
 
