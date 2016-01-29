@@ -86,6 +86,8 @@ otherobj= $(TERMCAP_OBJ) $(PRE_ALLOC_OBJ) $(GMALLOC_OBJ) $(RALLOC_OBJ) \
 
 
 ** cflow
+
+*** call graph
 cflow -d 6 --emacs -T vm-limit.c dispnew.c frame.c scroll.c xdisp.c menu.c window.c \
 	charset.c coding.c category.c ccl.c character.c chartab.c bidi.c \
 	cm.c term.c terminal.c xfaces.c \
@@ -103,6 +105,24 @@ cflow -d 6 --emacs -T vm-limit.c dispnew.c frame.c scroll.c xdisp.c menu.c windo
         terminfo.c lastfile.c -o cflow.txt
 
 [[bookmark:cflow.txt][Bookmark: cflow.txt]]
+*** reverse call graph
+cflow -r -d 3 --emacs -T vm-limit.c dispnew.c frame.c scroll.c xdisp.c menu.c window.c \
+	charset.c coding.c category.c ccl.c character.c chartab.c bidi.c \
+	cm.c term.c terminal.c xfaces.c \
+	emacs.c keyboard.c macros.c keymap.c sysdep.c \
+	buffer.c filelock.c insdel.c marker.c \
+	minibuf.c fileio.c dired.c \
+	cmds.c casetab.c casefiddle.c indent.c search.c regex.c undo.c \
+	alloc.c data.c doc.c editfns.c callint.c \
+	eval.c floatfns.c fns.c font.c print.c lread.c \
+	syntax.c unexec.h bytecode.c \
+	process.c gnutls.c callproc.c \
+	region-cache.c sound.c atimer.c \
+	doprnt.c intervals.c textprop.c composite.c xml.c inotify.c \
+	profiler.c decompress.c \
+        terminfo.c lastfile.c -o cflow.txt
+
+
 ** emacs.o
 [[bookmark:emacs.c][Bookmark: emacs.c]]
 ** lisp parsing
