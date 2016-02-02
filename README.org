@@ -106,6 +106,9 @@ cflow --cpp -r -b --emacs -T \
  vm-limit.c dispnew.c frame.c scroll.c xdisp.c menu.c xmenu.c window.c charset.c coding.c category.c ccl.c character.c chartab.c bidi.c cm.c term.c terminal.c xfaces.c xterm.c xfns.c xselect.c xrdb.c xsmfns.c xsettings.c gtkutil.c emacsgtkfixed.c dbusbind.c emacs.c keyboard.c macros.c keymap.c sysdep.c buffer.c filelock.c insdel.c marker.c minibuf.c fileio.c dired.c cmds.c casetab.c casefiddle.c indent.c search.c regex.c undo.c alloc.c data.c doc.c editfns.c callint.c eval.c floatfns.c fns.c font.c print.c lread.c syntax.c unexelf.c bytecode.c process.c gnutls.c callproc.c region-cache.c sound.c atimer.c doprnt.c intervals.c textprop.c composite.c xml.c gfilenotify.c profiler.c decompress.c xfont.c ftfont.c xftfont.c ftxfont.c fontset.c fringe.c image.c xgselect.c terminfo.c lastfile.c \
  -o emacs.reverse.b.cflow
 
+** function list
+perl -ne '$names{$1}=++$$count if /([a-zA-Z_0-9]+)\(\)/;map {print "$_\n"} sort keys %names if eof;prin' emacs.b.cflow > emacs.function.list.txt
+
 ** emacs.o
 [[bookmark:emacs.c][Bookmark: emacs.c]]
 ** lisp parsing
