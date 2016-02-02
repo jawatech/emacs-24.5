@@ -109,6 +109,12 @@ cflow --cpp -r -b --emacs -T \
 ** function list
 perl -ne '$names{$1}=++$$count if /([a-zA-Z_0-9]+)\(\)/;map {print "$_\n"} sort keys %names if eof;prin' emacs.b.cflow > emacs.function.list.txt
 
+** macro list
+perl -ne '$names{$1}=++$$count if /-([A-Z_0-9]+)\(\)/;map {print "$_\n"} sort keys %names if eof;prin' emacs.b.cflow > emacs.macro.list.txt
+
+** external function list
+perl -ne '$names{$1}=++$$count if /-([a-zA-Z_0-9]+)\(\)$/;map {print "$_\n" if not /^[A-Z_0-9]+$/} sort keys %names if eof;prin' emacs.b.cflow > emacs.extern.list.txt
+
 ** emacs.o
 [[bookmark:emacs.c][Bookmark: emacs.c]]
 ** lisp parsing
