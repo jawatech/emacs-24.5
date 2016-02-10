@@ -119,11 +119,11 @@ perl -ne '$names{$1}=++$$count if /-([a-zA-Z_0-9]+)\(\)$/;map {print "$_\n" if n
 [[bookmark:emacs.c][Bookmark: emacs.c]]
 
 *** Frecursive_edit
-
+/* Enter editor command loop.  This never returns.  */
 *** emacs_open
-
+emacs -t #terminal mode
 *** message_dolog
-
+clear logging
 ** lisp parsing
 *** lread.c
 
