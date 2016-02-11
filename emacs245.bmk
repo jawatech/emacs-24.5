@@ -2,7 +2,19 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(#1=(#("Unless next switch is -nl, load \"loadup.el\" first thing." 0 56
+(#1=(#("defsubr" 0 7
+      (bmkp-full-record #1#))
+    (filename . "~/github/emacs-24.5/src/lread.c")
+    (buffer-name . "lread.c")
+    (front-context-string . "defsubr (struct ")
+    (rear-context-string . " size;\n}\n\f\nvoid\n")
+    (front-context-region-string)
+    (rear-context-region-string)
+    (visits . 0)
+    (time . #2=(22203 56265 882608 839000))
+    (created . #2#)
+    (position . 113420))
+#1=(#("Unless next switch is -nl, load \"loadup.el\" first thing." 0 56
       (bmkp-full-record #1#))
     (filename . "~/github/emacs-24.5/src/emacs.c")
     (buffer-name . "emacs.c")
